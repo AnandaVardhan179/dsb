@@ -1,0 +1,117 @@
+/* Container styling */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(45deg, #344955 31%, #0c0c0c 96%);
+  align-items: center; /* Center content */
+}
+
+/* Option cards styling */
+.option-card {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  background-color: #4a4a4a;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  background-color: #5e5e5e;
+}
+
+/* Chat container */
+.chat-container {
+  max-height: 400px;
+  width: 50%; /* Adjust width to center chat */
+  overflow-y: auto;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Message bubbles */
+.message-bubble {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  min-width: 30px;
+  max-width: 50%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #4a90e2;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot-message {
+  background-color: transparent;
+  color: white;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+/* Special styling for free text bot messages */
+.bot-free-text {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Input container fixed at the bottom */
+.input-container {
+  width: 50%; /* Match chat container width */
+  margin-top: 20px;
+}
+
+.prompt-input {
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  flex-grow: 1;
+}
+
+.attach-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.attach-button:hover {
+  background-color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .option-card {
+    font-size: 1rem;
+  }
+
+  .prompt-input {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .message-bubble {
+    max-width: 85%;
+  }
+
+  .chat-container,
+  .input-container {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
